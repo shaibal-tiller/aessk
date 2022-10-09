@@ -1,0 +1,4 @@
+.form{
+    @apply
+    bg-[#f2f2f2] rounded-2xl mt-4
+}

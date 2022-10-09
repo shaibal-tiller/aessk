@@ -34,7 +34,7 @@ const TextFieldInput = ({ label, inputType = 'text', name }) => {
             <FormControl sx={{ minWidth: '60%' }}>
                 <TextField size='small'
                     label={label}
-                    name={name || label}
+                    name={ label}
                     variant="outlined"
                     onChange={handleChange}
                     value={value}

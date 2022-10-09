@@ -37,10 +37,10 @@ const DatePicker = ({ label, name }) => {
                 >
                     <FormControl sx={{ minWidth: "60%" }}>
                         <DesktopDatePicker
-                            name={name || label || "date"}
+                            name={ label || "Date"}
                             label={label || "Select Date"}
                             inputFormat="DD/MM/YYYY"
-                            value={value}
+                            value={'11/11/2011'}
                             onChange={handleChange}
                             renderInput={(params) => <TextField size='small' {...params} />}
                         />

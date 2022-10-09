@@ -5,11 +5,16 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import { TaskAlt } from '@mui/icons-material';
 import { display, upload } from '../services/utililtyService';
 import AppContext from "../components/App/Context"
 import { useContext } from "react"
+import { useReactToPrint } from 'react-to-print';
+import ComponentToPrint from '../components/ComponentToPrint'
+import ReactToPrint from 'react-to-print';
+import { useNavigate } from 'react-router-dom';
+
 export default function StepperForm({ Component, steps, for_form }) {
 
 
@@ -18,15 +23,17 @@ export default function StepperForm({ Component, steps, for_form }) {
 
 
     const myContext = useContext(AppContext)
-
+ const navigate = useNavigate()
     const handleSubmit = () => {
-        upload(myContext.userData)
-        myContext.setUserData({})
-        handleReset();
+             navigate('/print')
+        // upload(myContext.userData)
+        // myContext.setUserData({})
+
+        // handleReset();
     }
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        
+
     };
 
     const handleBack = () => {
@@ -60,7 +67,7 @@ export default function StepperForm({ Component, steps, for_form }) {
 
                     </Typography>
 
-
+                    
                     <Box sx={{ flex: '1 1 auto', textAlign: 'center', justifyContent: 'center', mt: 2 }} >
                         <Button onClick={handleSubmit}>REGISTER</Button>
                     </Box>

@@ -7,10 +7,10 @@ import FormLabel from '@mui/material/FormLabel';
 import { Box } from '@mui/material';
 
 const RadioComponent = ({ elements, label }) => {
-   
+
     const handleChange = (e) => {
-      
-        
+
+
         // myContext.setBasicData({ ...(myContext.basicData), [e.target.name]: e.target.value })
         // // //updateData({ [e.target.name]: e.target.value })
 
@@ -26,10 +26,10 @@ const RadioComponent = ({ elements, label }) => {
         <FormControl>
             <FormLabel id="demo-row-radio-buttons-group-label">{label}</FormLabel>
             <RadioGroup
-name='sur_type'
+                name={label}
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
-                
+
                 sx={{ gap: 3 }}
             >
                 {elements.map((el, index) => {

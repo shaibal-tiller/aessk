@@ -45,7 +45,7 @@ const SelectDropDown = ({ element, name, label, }) => {
                     sx={{ "&:hover": { bgcolor: 'transparent' }, 'textAlign': 'left' }}
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    name={name}
+                    name={label}
                     value={value}
                     label={label}
                     onChange={handleChange}

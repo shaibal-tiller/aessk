@@ -7,14 +7,14 @@ import Title from './Title'
 const Home = () => {
   const steps=['Step 1','Step 2','Step 3']
   return (
-    <div>
+    <div className='w-[100%]'>
       <Header />
       <div className='flex justify-center'>
 
         <Title title={"4th Grand Reunion"} />
       </div>
-      <div className='form-container w-[70%]
-      flex justify-center text-center mt-4 ml-[10%]'>
+      <div className='form-container 
+      flex justify-center text-center mt-4 mx-4'>
         <StepperForm Component={Form} steps={steps}/>
       </div>
 

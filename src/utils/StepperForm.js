@@ -5,7 +5,7 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useState,useRef } from 'react';
+import { useState, useRef } from 'react';
 import { TaskAlt } from '@mui/icons-material';
 import { display, upload } from '../services/utililtyService';
 import AppContext from "../components/App/Context"
@@ -23,9 +23,9 @@ export default function StepperForm({ Component, steps, for_form }) {
 
 
     const myContext = useContext(AppContext)
- const navigate = useNavigate()
+    const navigate = useNavigate()
     const handleSubmit = () => {
-             navigate('/print')
+        navigate('/print')
         // upload(myContext.userData)
         // myContext.setUserData({})
 
@@ -63,14 +63,14 @@ export default function StepperForm({ Component, steps, for_form }) {
                 <React.Fragment>
                     <Typography className='' sx={{ alignItems: 'center', gap: 2, mt: 2, mb: 1, textAlign: 'center', minWidth: '500px' }}>
                         <TaskAlt sx={{ color: 'green' }} fontSize='large' />
-                        <div style={{ fontSize: '1.2rem' }} className="form w-[60%] text-center">I, <strong>{myContext.userData.mem_name}</strong> DECLARE ALL THIS INFORMATION OF ME AS VALID</div>
-
+                        <div style={{ fontSize: '1.2rem' }} className="form w-[60%] text-center">I, <strong>{myContext.userData.mem_name}</strong> DECLARE ALL THIS INFORMATION OF ME AS VALID
+                       
+                            <Button className='' onClick={handleSubmit}>REGISTER</Button>
+                        </div>
                     </Typography>
 
-                    
-                    <Box sx={{ flex: '1 1 auto', textAlign: 'center', justifyContent: 'center', mt: 2 }} >
-                        <Button onClick={handleSubmit}>REGISTER</Button>
-                    </Box>
+
+
 
                 </React.Fragment>
             ) : (

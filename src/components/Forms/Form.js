@@ -13,9 +13,9 @@ const Form = ({ stepNo }) => {
         <DatePicker label={"Date of Birth"} name='mem_dob' />
         <SelectDropDown label={'Sex'} name={'mem_sex'} element={['Male', 'Female', 'Other']} />
         <SelectDropDown label={'Blood Group'} name={'mem_bg'} element={['A+', 'B+', 'AB+', 'O+', 'A-', 'B-', 'AB-', 'O-']} />
-        <TextFieldInput label={'Attach Photo'} name='mem_photo' inputType='file' />
+      {/*   <TextFieldInput label={'Attach Photo'} name='mem_photo' inputType='file' /> */}
         <TextFieldInput label={'NID/PASSPORT No.'} name='mem_nid' inputType='text' />
-        <TextFieldInput label={'Attach ID'} name='mem_idProof' inputType='file' />
+        {/* <TextFieldInput label={'Attach ID'} name='mem_idProof' inputType='file' /> */}
         <TextFieldInput label={'Father\'s name'} name='mem_fatherName' inputType='text' />
         <TextFieldInput label={'Mother\'s name'} name='mem_motherName' inputType='text' />
         <TextFieldInput label={'Spouse\'s name'} name='mem_spouseName' inputType='text' />

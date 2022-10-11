@@ -13,10 +13,13 @@ const DatePicker = ({ label, name }) => {
 
     const myContext = useContext(AppContext)
 
-    const [value, setValue] = useState()
+    const [value, setValue] = useState("01/01/1990")
     const handleChange = (newValue) => {
-                 setValue(newValue)
-            myContext.setUserData({...(myContext.userData),[name]:newValue})
+        setValue(newValue)
+
+        const tempDate = `${newValue.$D < 10 ? "0" : ""}${newValue.$D}/${newValue.$M + 1 < 10 ? "0" : ""}${newValue.$M + 1}/${newValue.$y}`
+
+        myContext.setUserData({ ...(myContext.userData), [name]: tempDate })
     }
 
     useEffect(() => {
@@ -37,10 +40,10 @@ const DatePicker = ({ label, name }) => {
                 >
                     <FormControl sx={{ minWidth: "60%" }}>
                         <DesktopDatePicker
-                            name={ label || "Date"}
+                            name={label || "Date"}
                             label={label || "Select Date"}
                             inputFormat="DD/MM/YYYY"
-                            value={'11/11/2011'}
+                            value={value}
                             onChange={handleChange}
                             renderInput={(params) => <TextField size='small' {...params} />}
                         />
